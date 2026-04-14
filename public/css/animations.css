@@ -1,0 +1,63 @@
+/* animations.css */
+
+/* ── Scroll reveal ───────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s var(--ease),
+    transform 0.65s var(--ease);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero fade-up ────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 0.8s var(--ease) forwards;
+}
+.hero__eyebrow { animation-delay: 0.05s; }
+.hero__headline { animation-delay: 0.18s; }
+.hero__sub      { animation-delay: 0.32s; }
+.hero__terminal { animation-delay: 0.46s; }
+.hero__actions  { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Pulse (eyebrow dot) ─────────── */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 4px var(--accent); }
+  50%       { box-shadow: 0 0 12px var(--accent), 0 0 20px var(--accent-glow); }
+}
+
+/* ── Cursor blink ────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Scroll thumb ────────────────── */
+@keyframes scrollDown {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(250%); opacity: 0; }
+}
+
+/* ── Stagger children of grids ───── */
+.projects__grid .project-card:nth-child(1) { transition-delay: 0ms; }
+.projects__grid .project-card:nth-child(2) { transition-delay: 80ms; }
+.projects__grid .project-card:nth-child(3) { transition-delay: 160ms; }
+
+.skills__layout .skill-col:nth-child(1) { transition-delay: 0ms; }
+.skills__layout .skill-col:nth-child(2) { transition-delay: 100ms; }
+.skills__layout .skill-col:nth-child(3) { transition-delay: 200ms; }
+
+.about__facts li:nth-child(1) { transition-delay: 0ms; }
+.about__facts li:nth-child(2) { transition-delay: 60ms; }
+.about__facts li:nth-child(3) { transition-delay: 120ms; }

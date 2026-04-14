@@ -1,0 +1,55 @@
+/* variables.css — Design tokens */
+:root {
+  /* ── Palette ──────────────────────── */
+  --bg-0:       #0d0d0f;       /* deepest background          */
+  --bg-1:       #111113;       /* section alternate           */
+  --bg-2:       #17171b;       /* card / surface              */
+  --bg-3:       #1f1f25;       /* elevated surface            */
+
+  --border:     rgba(255,255,255,0.06);
+  --border-lit: rgba(255,255,255,0.12);
+
+  --text-0:     #f0f0f4;       /* primary text                */
+  --text-1:     #9898a8;       /* secondary / muted           */
+  --text-2:     #50505e;       /* dimmed                      */
+
+  --accent:     #f0a500;       /* amber — the signature tone  */
+  --accent-dim: rgba(240,165,0,0.10);
+  --accent-glow:rgba(240,165,0,0.20);
+
+  /* ── Typography ──────────────────── */
+  --font-serif: 'Fraunces', Georgia, serif;
+  /* --font-mono:  'IBM Plex Mono', 'Courier New', monospace; */
+  --font-mono:  'calibri';
+
+  --scale-xs:   0.72rem;
+  --scale-sm:   0.85rem;
+  --scale-base: 1rem;
+  --scale-md:   1.125rem;
+  --scale-lg:   clamp(1.3rem, 2.5vw, 1.75rem);
+  --scale-xl:   clamp(1.9rem, 4vw, 2.75rem);
+  --scale-2xl:  clamp(2.8rem, 7vw, 5.5rem);
+
+  /* ── Spacing ──────────────────────── */
+  --s1:  0.25rem;
+  --s2:  0.5rem;
+  --s3:  0.75rem;
+  --s4:  1rem;
+  --s6:  1.5rem;
+  --s8:  2rem;
+  --s12: 3rem;
+  --s16: 4rem;
+  --s24: 6rem;
+  --s32: 8rem;
+
+  /* ── Layout ───────────────────────── */
+  --max-w:  1100px;
+  --nav-h:  68px;
+  --r:      6px;       /* border-radius base */
+
+  /* ── Transitions ──────────────────── */
+  --ease:   cubic-bezier(0.16, 1, 0.3, 1);
+  --t1:     120ms ease;
+  --t2:     260ms var(--ease);
+  --t3:     500ms var(--ease);
+}

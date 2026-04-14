@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Software Developer portfolio — crafting fast, clean digital products." />
+  <title>Patrick Kiprop· Software Developer</title>
+
+  <link rel="stylesheet" href="./public/css/reset.css" />
+  <link rel="stylesheet" href="./public/css/variables.css" />
+  <link rel="stylesheet" href="./public/css/style.css" />
+  <link rel="stylesheet" href="./public/css/animations.css" />
+  <link rel="stylesheet" href="./public/css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <!-- ══════════════════════════════════
+       NAV
+  ══════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo" aria-label="Home">
+      <span class="nav__logo-prompt">~/</span><span class="nav__logo-name">Patrick Kiprop</span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="?p=<?php echo htmlspecialchars(Views_controller::Mask("about")['page']) ?>" class="nav__link"><span class="nav__link-num">01.</span>About</a></li>
+        <li><a href="?p=<?php echo htmlspecialchars(Views_controller::Mask("projects")['page']) ?>" class="nav__link"><span class="nav__link-num">02.</span>Work</a></li>
+        <li><a href="?p=<?php echo htmlspecialchars(Views_controller::Mask("skills")['page']) ?>" class="nav__link"><span class="nav__link-num">03.</span>Skills</a></li>
+        <li><a href="?p=<?php echo htmlspecialchars(Views_controller::Mask("contact")['page']) ?>" class="nav__link"><span class="nav__link-num">04.</span>Contact</a></li>
+        <li><a href="#" class="nav__resume" download>Resume ↓</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
